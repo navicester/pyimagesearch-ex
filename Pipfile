@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "1.20.1"
+opencv-python = "==3.4.8.29"
+scikit-image = "0.18.1"
+imutils = "*"
+#python-dateutil = "*"
+jupyter = "*"
+install = "*"
+matplotlib = "==3.5.1"
+tensorflow = "==2.8.0"
+seaborn = "*"
+pip = "*"
+imageio = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

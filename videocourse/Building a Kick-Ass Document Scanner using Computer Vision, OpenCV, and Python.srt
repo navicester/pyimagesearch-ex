@@ -1,0 +1,220 @@
+1
+00:00:00,030 --> 00:00:02,550
+hey everyone this is Adrian from PI
+
+2
+00:00:02,550 --> 00:00:04,770
+image search comm today I'm going to
+
+3
+00:00:04,770 --> 00:00:07,230
+show you how to build a mobile scanner
+
+4
+00:00:07,230 --> 00:00:11,160
+app similar to apps such as genius can
+
+5
+00:00:11,160 --> 00:00:13,889
+now perhaps you've seen these these
+
+6
+00:00:13,889 --> 00:00:15,780
+mobile scanning apps before but the
+
+7
+00:00:15,780 --> 00:00:17,609
+general premise is that you know you
+
+8
+00:00:17,609 --> 00:00:20,010
+have a piece of paper a document or
+
+9
+00:00:20,010 --> 00:00:22,529
+receipt I need to scan it so you pull
+
+10
+00:00:22,529 --> 00:00:24,359
+out your phone and snap a photo of it
+
+11
+00:00:24,359 --> 00:00:26,609
+and then magically it's scanned into a
+
+12
+00:00:26,609 --> 00:00:29,820
+PDF there's apps like Pina scan you've
+
+13
+00:00:29,820 --> 00:00:32,940
+got turbo scan and you got scanner pro
+
+14
+00:00:32,940 --> 00:00:34,649
+you just have tons of apps that
+
+15
+00:00:34,649 --> 00:00:37,020
+basically do the same thing they allow
+
+16
+00:00:37,020 --> 00:00:38,730
+you to take a picture of a document and
+
+17
+00:00:38,730 --> 00:00:40,710
+scan it into your phone it's a really
+
+18
+00:00:40,710 --> 00:00:42,649
+cool concept but you may be wondering
+
+19
+00:00:42,649 --> 00:00:45,629
+what's the computer vision that goes
+
+20
+00:00:45,629 --> 00:00:48,360
+into it and how does it work well that's
+
+21
+00:00:48,360 --> 00:00:51,600
+exactly what this post is going to
+
+22
+00:00:51,600 --> 00:00:53,789
+answer for so you have an example image
+
+23
+00:00:53,789 --> 00:00:56,850
+here I'm just going to pull this up so
+
+24
+00:00:56,850 --> 00:00:58,289
+the first step we're going to perform is
+
+25
+00:00:58,289 --> 00:01:00,510
+edge detection so over here on the Left
+
+26
+00:01:00,510 --> 00:01:04,589
+I have a piece of paper from practical
+
+27
+00:01:04,589 --> 00:01:06,930
+Python and OpenCV my computer vision
+
+28
+00:01:06,930 --> 00:01:08,760
+book that I route and the first step
+
+29
+00:01:08,760 --> 00:01:09,990
+we're going to do here it's poor mesh
+
+30
+00:01:09,990 --> 00:01:11,369
+detection we're going to find the
+
+31
+00:01:11,369 --> 00:01:14,400
+outline of that piece of paper after we
+
+32
+00:01:14,400 --> 00:01:16,290
+do that we're going to find the contours
+
+33
+00:01:16,290 --> 00:01:18,720
+of that piece of paper or the outline of
+
+34
+00:01:18,720 --> 00:01:24,900
+it then we can apply a slightly longer
+
+35
+00:01:24,900 --> 00:01:28,200
+step of actually applying the four-point
+
+36
+00:01:28,200 --> 00:01:30,540
+Transformer perspective warp and we're
+
+37
+00:01:30,540 --> 00:01:32,700
+also going to threshold it to give it
+
+38
+00:01:32,700 --> 00:01:35,850
+that classic black and white paper feel
+
+39
+00:01:35,850 --> 00:01:38,490
+so here's the final result compared to
+
+40
+00:01:38,490 --> 00:01:40,799
+the original originals over here on the
+
+41
+00:01:40,799 --> 00:01:42,899
+left and on the right we have heart
+
+42
+00:01:42,899 --> 00:01:44,610
+we have successfully scanned our piece
+
+43
+00:01:44,610 --> 00:01:46,860
+of paper notice how the perspective has
+
+44
+00:01:46,860 --> 00:01:48,720
+been transformed to give us this
+
+45
+00:01:48,720 --> 00:01:51,540
+top-down bird's-eye view and also notice
+
+46
+00:01:51,540 --> 00:01:53,460
+how we have a strictly black and white
+
+47
+00:01:53,460 --> 00:01:55,680
+image now you can see over here it's not
+
+48
+00:01:55,680 --> 00:01:58,890
+always is the perspective of but you
+
+49
+00:01:58,890 --> 00:02:00,750
+have a lot of gray tones in the paper
+
+50
+00:02:00,750 --> 00:02:03,329
+but over here it's nice and scanned and
+
+51
+00:02:03,329 --> 00:02:06,180
+looks looks all pretty so to get a full
+
+52
+00:02:06,180 --> 00:02:08,610
+view of all the code that that I have
+
+53
+00:02:08,610 --> 00:02:10,679
+here check out the rest of this blog
+
+54
+00:02:10,679 --> 00:02:12,940
+post I think you really can enjoy
+
+55
+00:02:12,940 --> 00:02:15,000
+you
+
